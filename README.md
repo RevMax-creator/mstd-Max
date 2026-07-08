@@ -1,29 +1,39 @@
 # mstd
 
-> A lightweight, cross-platform C library designed to provide a set of standard utilities, data structures, and abstractions.
+> A lightweight, cross-platform C library providing standard utilities, memory allocators, data structures, platform abstractions, and systems programming primitives.
 
 ---
 
 ## About
 
-mstd  provides:
+This repository is a **Linux port and continued development** of the original **mstd** project by **BlueMoonHunt**.
 
-* A standard set of tools for C programmers.
-* Cross-platform compatibility (Windows, Linux, macOS: in progress).
-* Performance optimizations.
-  
-| Feature | Description |
-| :--- | :--- |
-| **Memory Management** | Arena allocators, scratch memory, and discereat arrays (`DArray`). |
-| **Data Structures** | Linked lists (SLL/DLL), strings (`Str8`, `Str16`, `Str32`). |
-| **Platform Abstraction** | Cross-platform support (Windows/Linux/macOS) and compiler detection (MSVC/Clang/GCC). |
-| **Unicode Support** | UTF-8/16/32 string handling and conversion. |
-| **File I/O** | Basic file operations and memory-mapped file support. |
-| **Debugging Tools** | Assertions, traps, and validation macros. |
-| **Math Utilities** | Bit manipulation, alignment, and clamping. |
-| **Timing** | High-resolution timers and clock utilities. |
-| **Thread** | Thread, Mutex, R/W Mutex, Semaphore, Barrier and Condition variable |
+The original project is licensed under the MIT License, and this repository continues to use the same license while expanding platform support and functionality.
 
+### Maintainer
+
+* **Original Author:** BlueMoonHunt
+* **Linux Port & Ongoing Development:** RevMax-creator
+
+___
+
+## Features
+
+mstd provides a growing collection of reusable systems programming utilities for C.
+
+| Feature                  | Description                                                                          |
+| ------------------------ | ------------------------------------------------------------------------------------ |
+| **Memory Management**    | Arena allocators, scratch memory, and dynamic arrays (`DArray`).                     |
+| **Data Structures**      | Singly and doubly linked lists, UTF string types (`Str8`, `Str16`, `Str32`).         |
+| **Platform Abstraction** | Cross-platform support for Windows, Linux, and macOS (work in progress).             |
+| **Unicode Support**      | UTF-8, UTF-16, and UTF-32 string handling and conversion.                            |
+| **File I/O**             | File operations and memory-mapped file support.                                      |
+| **Debugging Tools**      | Assertions, traps, validation macros, and diagnostics.                               |
+| **Math Utilities**       | Bit manipulation, alignment, clamping, and helper macros.                            |
+| **Timing**               | High-resolution timers and clock utilities.                                          |
+| **Threading**            | Threads, mutexes, read/write mutexes, semaphores, barriers, and condition variables. |
+
+---
 
 ## Usage
 
@@ -64,8 +74,39 @@ int main() {
 
 #include "mstd.c"
 ```
+---
 
-## TODO
-* Add custom IO to unify Str8 and Str8View to take away null terminator guarantee in Str8.
-* Add Linux layer.
-* General Arena with more options. Current one is fix sized does not have customizing options like grow / overflow handeling.
+## Roadmap
+
+### Platform Support
+
+* [x] Windows
+* [] Linux
+* [] macOS
+
+### Planned Improvements
+
+* Unify `Str8` and `Str8View` with customizable I/O.
+* Complete the Linux platform layer.
+* Improve the arena allocator with configurable growth policies and overflow handling.
+* Expand documentation and examples.
+* Add CI builds for Windows and Linux.
+* Improve test coverage.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+### Attribution
+
+Original project:
+
+* Copyright (c) 2025 BlueMoonHunt
+
+Linux port and subsequent modifications:
+
+* Copyright (c) 2026 RevMax-creator
+
+See the `LICENSE` file for the full license text.
