@@ -81,8 +81,8 @@ int main() {
 ### Platform Support
 
 * [x] Windows
-* [] Linux
-* [] macOS
+* [ ] Linux
+* [ ] macOS
 
 ### Planned Improvements
 
